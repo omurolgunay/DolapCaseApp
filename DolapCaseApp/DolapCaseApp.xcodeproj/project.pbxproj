@@ -13,6 +13,9 @@
 		ED802609237EEEEE00CDBBF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED802607237EEEEE00CDBBF4 /* Main.storyboard */; };
 		ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED80260A237EEEF000CDBBF4 /* Assets.xcassets */; };
 		ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */; };
+		ED802617237F0C7100CDBBF4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802616237F0C7100CDBBF4 /* Service.swift */; };
+		ED80261C237F0F3E00CDBBF4 /* SocialData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED80261B237F0F3E00CDBBF4 /* SocialData.json */; };
+		ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED80261D237F0F4600CDBBF4 /* ProductData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		ED80260A237EEEF000CDBBF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED80260D237EEEF000CDBBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED80260F237EEEF000CDBBF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED802616237F0C7100CDBBF4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		ED80261B237F0F3E00CDBBF4 /* SocialData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SocialData.json; sourceTree = "<group>"; };
+		ED80261D237F0F4600CDBBF4 /* ProductData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		ED802600237EEEEE00CDBBF4 /* DolapCaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */,
-				ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */,
 				ED802605237EEEEE00CDBBF4 /* ViewController.swift */,
+				ED802616237F0C7100CDBBF4 /* Service.swift */,
 				ED802607237EEEEE00CDBBF4 /* Main.storyboard */,
-				ED80260A237EEEF000CDBBF4 /* Assets.xcassets */,
 				ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */,
-				ED80260F237EEEF000CDBBF4 /* Info.plist */,
+				ED802618237F0E8400CDBBF4 /* Data */,
+				ED802615237EF28200CDBBF4 /* SupportinFiles */,
 			);
 			path = DolapCaseApp;
+			sourceTree = "<group>";
+		};
+		ED802615237EF28200CDBBF4 /* SupportinFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */,
+				ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */,
+				ED80260A237EEEF000CDBBF4 /* Assets.xcassets */,
+				ED80260F237EEEF000CDBBF4 /* Info.plist */,
+			);
+			path = SupportinFiles;
+			sourceTree = "<group>";
+		};
+		ED802618237F0E8400CDBBF4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ED80261D237F0F4600CDBBF4 /* ProductData.json */,
+				ED80261B237F0F3E00CDBBF4 /* SocialData.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED80261C237F0F3E00CDBBF4 /* SocialData.json in Resources */,
 				ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */,
+				ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */,
 				ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */,
 				ED802609237EEEEE00CDBBF4 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED802606237EEEEE00CDBBF4 /* ViewController.swift in Sources */,
+				ED802617237F0C7100CDBBF4 /* Service.swift in Sources */,
 				ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */,
 				ED802604237EEEEE00CDBBF4 /* SceneDelegate.swift in Sources */,
 			);
