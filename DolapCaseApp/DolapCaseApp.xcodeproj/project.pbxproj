@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2ECF86238137E400937D34 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF85238137E400937D34 /* UITableViewExtension.swift */; };
+		ED2ECF882381383700937D34 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */; };
+		ED2ECF8B2381449600937D34 /* ProductDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */; };
+		ED2ECF8C2381449600937D34 /* ProductDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */; };
 		ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */; };
 		ED802604237EEEEE00CDBBF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */; };
 		ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED802607237EEEEE00CDBBF4 /* ProductDetail.storyboard */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED2ECF85238137E400937D34 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageTableViewCell.swift; sourceTree = "<group>"; };
+		ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailImageTableViewCell.xib; sourceTree = "<group>"; };
 		ED8025FE237EEEEE00CDBBF4 /* DolapCaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DolapCaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED2ECF84238136F400937D34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */,
+				ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ED8025F5237EEEEE00CDBBF4 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				ED80262A237F18B300CDBBF4 /* Entity */,
+				ED2ECF84238136F400937D34 /* View */,
 				ED802625237F14C100CDBBF4 /* ProductDetailPresenter.swift */,
 				ED802623237F14C100CDBBF4 /* ProductDetailViewController.swift */,
 				ED802622237F14C100CDBBF4 /* ProductDetailRouter.swift */,
@@ -162,6 +180,8 @@
 		ED802635237F337800CDBBF4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ED2ECF85238137E400937D34 /* UITableViewExtension.swift */,
+				ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +246,7 @@
 			files = (
 				ED80261C237F0F3E00CDBBF4 /* SocialData.json in Resources */,
 				ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */,
+				ED2ECF8C2381449600937D34 /* ProductDetailImageTableViewCell.xib in Resources */,
 				ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */,
 				ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */,
 				ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */,
@@ -240,10 +261,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED802634237F32B400CDBBF4 /* StoryBoard.swift in Sources */,
+				ED2ECF8B2381449600937D34 /* ProductDetailImageTableViewCell.swift in Sources */,
 				ED80262C237F18C900CDBBF4 /* Product.swift in Sources */,
 				ED80262E237F18FE00CDBBF4 /* ProductSocial.swift in Sources */,
+				ED2ECF882381383700937D34 /* UITableViewCellExtension.swift in Sources */,
 				ED802626237F14C100CDBBF4 /* ProductDetailRouter.swift in Sources */,
 				ED802629237F14C100CDBBF4 /* ProductDetailPresenter.swift in Sources */,
+				ED2ECF86238137E400937D34 /* UITableViewExtension.swift in Sources */,
 				ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */,
 				ED802631237F265A00CDBBF4 /* Price.swift in Sources */,
 				ED802604237EEEEE00CDBBF4 /* SceneDelegate.swift in Sources */,
