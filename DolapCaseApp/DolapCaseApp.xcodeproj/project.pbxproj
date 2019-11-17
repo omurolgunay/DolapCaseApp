@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */; };
 		ED802604237EEEEE00CDBBF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */; };
-		ED802606237EEEEE00CDBBF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802605237EEEEE00CDBBF4 /* ViewController.swift */; };
-		ED802609237EEEEE00CDBBF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED802607237EEEEE00CDBBF4 /* Main.storyboard */; };
+		ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED802607237EEEEE00CDBBF4 /* ProductDetail.storyboard */; };
 		ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED80260A237EEEF000CDBBF4 /* Assets.xcassets */; };
 		ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */; };
 		ED80261C237F0F3E00CDBBF4 /* SocialData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED80261B237F0F3E00CDBBF4 /* SocialData.json */; };
@@ -19,14 +18,17 @@
 		ED802627237F14C100CDBBF4 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802623237F14C100CDBBF4 /* ProductDetailViewController.swift */; };
 		ED802628237F14C100CDBBF4 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802624237F14C100CDBBF4 /* ProductDetailInteractor.swift */; };
 		ED802629237F14C100CDBBF4 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802625237F14C100CDBBF4 /* ProductDetailPresenter.swift */; };
+		ED80262C237F18C900CDBBF4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80262B237F18C900CDBBF4 /* Product.swift */; };
+		ED80262E237F18FE00CDBBF4 /* ProductSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80262D237F18FE00CDBBF4 /* ProductSocial.swift */; };
+		ED802631237F265A00CDBBF4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802630237F265A00CDBBF4 /* Price.swift */; };
+		ED802634237F32B400CDBBF4 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802633237F32B400CDBBF4 /* StoryBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED8025FE237EEEEE00CDBBF4 /* DolapCaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DolapCaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED802603237EEEEE00CDBBF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED802605237EEEEE00CDBBF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED802608237EEEEE00CDBBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED802608237EEEEE00CDBBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductDetail.storyboard; sourceTree = "<group>"; };
 		ED80260A237EEEF000CDBBF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED80260D237EEEF000CDBBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED80260F237EEEF000CDBBF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		ED802623237F14C100CDBBF4 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		ED802624237F14C100CDBBF4 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
 		ED802625237F14C100CDBBF4 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
+		ED80262B237F18C900CDBBF4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		ED80262D237F18FE00CDBBF4 /* ProductSocial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSocial.swift; sourceTree = "<group>"; };
+		ED802630237F265A00CDBBF4 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		ED802633237F32B400CDBBF4 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +74,15 @@
 		ED802600237EEEEE00CDBBF4 /* DolapCaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED802605237EEEEE00CDBBF4 /* ViewController.swift */,
 				ED80261F237F141900CDBBF4 /* Modules */,
 				ED802620237F143000CDBBF4 /* Utils */,
-				ED802607237EEEEE00CDBBF4 /* Main.storyboard */,
-				ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */,
 				ED802618237F0E8400CDBBF4 /* Data */,
-				ED802615237EF28200CDBBF4 /* SupportinFiles */,
+				ED802615237EF28200CDBBF4 /* SupportingFiles */,
 			);
 			path = DolapCaseApp;
 			sourceTree = "<group>";
 		};
-		ED802615237EF28200CDBBF4 /* SupportinFiles */ = {
+		ED802615237EF28200CDBBF4 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */,
@@ -87,7 +90,7 @@
 				ED80260A237EEEF000CDBBF4 /* Assets.xcassets */,
 				ED80260F237EEEF000CDBBF4 /* Info.plist */,
 			);
-			path = SupportinFiles;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		ED802618237F0E8400CDBBF4 /* Data */ = {
@@ -102,6 +105,7 @@
 		ED80261F237F141900CDBBF4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED80262F237F1C9900CDBBF4 /* Storyboards */,
 				ED802621237F14C100CDBBF4 /* ProductDetail */,
 			);
 			path = Modules;
@@ -110,6 +114,8 @@
 		ED802620237F143000CDBBF4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ED802635237F337800CDBBF4 /* Extensions */,
+				ED802632237F32A000CDBBF4 /* Common */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -117,12 +123,47 @@
 		ED802621237F14C100CDBBF4 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
-				ED802622237F14C100CDBBF4 /* ProductDetailRouter.swift */,
-				ED802623237F14C100CDBBF4 /* ProductDetailViewController.swift */,
-				ED802624237F14C100CDBBF4 /* ProductDetailInteractor.swift */,
+				ED80262A237F18B300CDBBF4 /* Entity */,
 				ED802625237F14C100CDBBF4 /* ProductDetailPresenter.swift */,
+				ED802623237F14C100CDBBF4 /* ProductDetailViewController.swift */,
+				ED802622237F14C100CDBBF4 /* ProductDetailRouter.swift */,
+				ED802624237F14C100CDBBF4 /* ProductDetailInteractor.swift */,
 			);
 			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		ED80262A237F18B300CDBBF4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ED80262B237F18C900CDBBF4 /* Product.swift */,
+				ED802630237F265A00CDBBF4 /* Price.swift */,
+				ED80262D237F18FE00CDBBF4 /* ProductSocial.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ED80262F237F1C9900CDBBF4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ED802607237EEEEE00CDBBF4 /* ProductDetail.storyboard */,
+				ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ED802632237F32A000CDBBF4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ED802633237F32B400CDBBF4 /* StoryBoard.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ED802635237F337800CDBBF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +228,7 @@
 				ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */,
 				ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */,
 				ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */,
-				ED802609237EEEEE00CDBBF4 /* Main.storyboard in Resources */,
+				ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,10 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED802606237EEEEE00CDBBF4 /* ViewController.swift in Sources */,
+				ED802634237F32B400CDBBF4 /* StoryBoard.swift in Sources */,
+				ED80262C237F18C900CDBBF4 /* Product.swift in Sources */,
+				ED80262E237F18FE00CDBBF4 /* ProductSocial.swift in Sources */,
 				ED802626237F14C100CDBBF4 /* ProductDetailRouter.swift in Sources */,
 				ED802629237F14C100CDBBF4 /* ProductDetailPresenter.swift in Sources */,
 				ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */,
+				ED802631237F265A00CDBBF4 /* Price.swift in Sources */,
 				ED802604237EEEEE00CDBBF4 /* SceneDelegate.swift in Sources */,
 				ED802627237F14C100CDBBF4 /* ProductDetailViewController.swift in Sources */,
 				ED802628237F14C100CDBBF4 /* ProductDetailInteractor.swift in Sources */,
@@ -211,12 +255,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED802607237EEEEE00CDBBF4 /* Main.storyboard */ = {
+		ED802607237EEEEE00CDBBF4 /* ProductDetail.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ED802608237EEEEE00CDBBF4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ProductDetail.storyboard;
 			sourceTree = "<group>";
 		};
 		ED80260C237EEEF000CDBBF4 /* LaunchScreen.storyboard */ = {
@@ -350,7 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6Q92ZA8LP;
-				INFOPLIST_FILE = DolapCaseApp/Info.plist;
+				INFOPLIST_FILE = DolapCaseApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6Q92ZA8LP;
-				INFOPLIST_FILE = DolapCaseApp/Info.plist;
+				INFOPLIST_FILE = DolapCaseApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
