@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084976B5DBB0D1FFDD2C33FB /* Pods_DolapCaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6580DEFFCEE52D6F92BB826 /* Pods_DolapCaseApp.framework */; };
 		ED2ECF86238137E400937D34 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF85238137E400937D34 /* UITableViewExtension.swift */; };
 		ED2ECF882381383700937D34 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */; };
 		ED2ECF8B2381449600937D34 /* ProductDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */; };
@@ -25,9 +26,14 @@
 		ED80262E237F18FE00CDBBF4 /* ProductSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED80262D237F18FE00CDBBF4 /* ProductSocial.swift */; };
 		ED802631237F265A00CDBBF4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802630237F265A00CDBBF4 /* Price.swift */; };
 		ED802634237F32B400CDBBF4 /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802633237F32B400CDBBF4 /* StoryBoard.swift */; };
+		ED9764AE2381A3F1006C8EAC /* ProductInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9764AC2381A3F1006C8EAC /* ProductInfoTableViewCell.swift */; };
+		ED9764AF2381A3F1006C8EAC /* ProductInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9764AD2381A3F1006C8EAC /* ProductInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D220EBD8D0BE0DE228B6C2E /* Pods-DolapCaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DolapCaseApp.debug.xcconfig"; path = "Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B6580DEFFCEE52D6F92BB826 /* Pods_DolapCaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DolapCaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F9BC979D3089626B903EBA /* Pods-DolapCaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DolapCaseApp.release.xcconfig"; path = "Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp.release.xcconfig"; sourceTree = "<group>"; };
 		ED2ECF85238137E400937D34 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		ED80262D237F18FE00CDBBF4 /* ProductSocial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSocial.swift; sourceTree = "<group>"; };
 		ED802630237F265A00CDBBF4 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		ED802633237F32B400CDBBF4 /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
+		ED9764AC2381A3F1006C8EAC /* ProductInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoTableViewCell.swift; sourceTree = "<group>"; };
+		ED9764AD2381A3F1006C8EAC /* ProductInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +63,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084976B5DBB0D1FFDD2C33FB /* Pods_DolapCaseApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5050CB6894E967D41234878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6580DEFFCEE52D6F92BB826 /* Pods_DolapCaseApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC0C23A529467F04B96448CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D220EBD8D0BE0DE228B6C2E /* Pods-DolapCaseApp.debug.xcconfig */,
+				E3F9BC979D3089626B903EBA /* Pods-DolapCaseApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ED2ECF84238136F400937D34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */,
-				ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */,
+				ED9764AB23819CA4006C8EAC /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -75,6 +100,8 @@
 			children = (
 				ED802600237EEEEE00CDBBF4 /* DolapCaseApp */,
 				ED8025FF237EEEEE00CDBBF4 /* Products */,
+				EC0C23A529467F04B96448CF /* Pods */,
+				C5050CB6894E967D41234878 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +210,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ED9764AB23819CA4006C8EAC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */,
+				ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */,
+				ED9764AC2381A3F1006C8EAC /* ProductInfoTableViewCell.swift */,
+				ED9764AD2381A3F1006C8EAC /* ProductInfoTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED802612237EEEF000CDBBF4 /* Build configuration list for PBXNativeTarget "DolapCaseApp" */;
 			buildPhases = (
+				A8BE16F86AEC649A2156B75F /* [CP] Check Pods Manifest.lock */,
 				ED8025FA237EEEEE00CDBBF4 /* Sources */,
 				ED8025FB237EEEEE00CDBBF4 /* Frameworks */,
 				ED8025FC237EEEEE00CDBBF4 /* Resources */,
+				B74A939AB603B2856D055009 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,10 +287,53 @@
 				ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */,
 				ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */,
 				ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */,
+				ED9764AF2381A3F1006C8EAC /* ProductInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8BE16F86AEC649A2156B75F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DolapCaseApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B74A939AB603B2856D055009 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED8025FA237EEEEE00CDBBF4 /* Sources */ = {
@@ -261,6 +344,7 @@
 				ED2ECF8B2381449600937D34 /* ProductDetailImageTableViewCell.swift in Sources */,
 				ED80262C237F18C900CDBBF4 /* Product.swift in Sources */,
 				ED80262E237F18FE00CDBBF4 /* ProductSocial.swift in Sources */,
+				ED9764AE2381A3F1006C8EAC /* ProductInfoTableViewCell.swift in Sources */,
 				ED2ECF882381383700937D34 /* UITableViewCellExtension.swift in Sources */,
 				ED802626237F14C100CDBBF4 /* ProductDetailRouter.swift in Sources */,
 				ED802629237F14C100CDBBF4 /* ProductDetailPresenter.swift in Sources */,
@@ -410,6 +494,7 @@
 		};
 		ED802613237EEEF000CDBBF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D220EBD8D0BE0DE228B6C2E /* Pods-DolapCaseApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +513,7 @@
 		};
 		ED802614237EEEF000CDBBF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F9BC979D3089626B903EBA /* Pods-DolapCaseApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

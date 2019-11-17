@@ -12,6 +12,7 @@ protocol ProductDetailPresenterInterface: class {
     //MARK: View -> Presenter
     func viewDidAppear()
     func getProductData() -> Product?
+    func getProductImageUrl() -> URL?
 }
 
 final class ProductDetailPresenter {
@@ -41,6 +42,12 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
     func getProductData() -> Product? {
        return productDataResponse
     }
+    
+    func getProductImageUrl() -> URL? {
+        guard let stringUrl = productDataResponse?.image else { return nil}
+        let url = URL(string: stringUrl)
+        return url
+    }
 
 }
 
@@ -50,6 +57,7 @@ extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
         switch result {
         case .success(let productDataResult):
             self.productDataResponse = productDataResult
+            view?.loadProductDetailTableView()
             break
         case .failure(_):
             break
