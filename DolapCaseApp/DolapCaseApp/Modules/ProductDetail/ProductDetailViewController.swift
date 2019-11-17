@@ -14,8 +14,13 @@ protocol ProductDetailViewControllerInterface: class {
 
 class ProductDetailViewController: UIViewController {
     var presenter: ProductDetailPresenterInterface?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        presenter?.viewDidAppear()
+    }
 }
 
 extension ProductDetailViewController: ProductDetailViewControllerInterface {
-
+    
 }

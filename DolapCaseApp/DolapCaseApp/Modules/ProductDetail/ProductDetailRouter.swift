@@ -13,21 +13,27 @@ protocol ProductDetailRouterInterface: class {
 
 }
 
-class ProductDetailRouter: NSObject {
+final class ProductDetailRouter: NSObject {
 
     weak var presenter: ProductDetailPresenterInterface?
 
-    static func setupModule() -> ProductDetailViewController {
-        let vc = ProductDetailViewController()
-        let interactor = ProductDetailInteractor()
-        let router = ProductDetailRouter()
-        let presenter = ProductDetailPresenter(interactor: interactor, router: router, view: vc)
+    static func setupModule() -> ProductDetailViewController? {
+        let storyBoard = StoryBoard.productDetail
+        if let view = storyBoard.instantiateInitialViewController() as? ProductDetailViewController {
+            let interactor = ProductDetailInteractor()
+            let router = ProductDetailRouter()
+            let presenter = ProductDetailPresenter(interactor: interactor, router: router, view: view)
 
-        vc.presenter = presenter
-        router.presenter = presenter
-        interactor.presenter = presenter
-        return vc
+            view.presenter = presenter
+            router.presenter = presenter
+            interactor.output = presenter
+            
+            return view
+        }
+        fatalError("ProductDetail module can not created.")
     }
+    
+    
 }
 
 extension ProductDetailRouter: ProductDetailRouterInterface {
