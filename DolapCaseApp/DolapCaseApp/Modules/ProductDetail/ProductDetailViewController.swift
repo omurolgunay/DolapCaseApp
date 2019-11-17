@@ -10,6 +10,7 @@ import UIKit
 
 protocol ProductDetailViewControllerInterface: class {
     func loadProductDetailTableView()
+    func loadProductSocialInfo()
 }
 
 extension ProductDetailViewController {
@@ -28,6 +29,8 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var productDetailTableView: UITableView! {
         didSet {
             productDetailTableView.register(cellType: ProductDetailImageTableViewCell.self)
+            productDetailTableView.register(cellType: ProductDetailInfoTableViewCell.self)
+            productDetailTableView.tableFooterView = UIView()
         }
     }
     
@@ -41,12 +44,17 @@ extension ProductDetailViewController: ProductDetailViewControllerInterface {
     func loadProductDetailTableView() {
         productDetailTableView.reloadData()
     }
+    
+    func loadProductSocialInfo() {
+        //productDetailTableView.reloadRows(at: [IndexPath(row: CellType.productInfoCell.rawValue, section: 0)], with: .automatic)
+        print("we are here")
+    }
 }
 
 extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +64,17 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             if let url = presenter?.getProductImageUrl() {
                 cell.configure(url: url)
             }
+            
+            return cell
+        case CellType.productInfoCell.rawValue:
+            let cell = tableView.dequeueReusableCell(with: ProductDetailInfoTableViewCell.self, for: indexPath)
+            if let product = presenter?.getProductData() {
+                cell.configure(product: product)
+            }
+            if let socialData = presenter?.getProductSocialData() {
+                cell.updateSocialData(socialData: socialData)
+            }
+            
             return cell
         default:
             break

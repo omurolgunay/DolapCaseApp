@@ -12,6 +12,7 @@ protocol ProductDetailPresenterInterface: class {
     //MARK: View -> Presenter
     func viewDidAppear()
     func getProductData() -> Product?
+    func getProductSocialData() -> ProductSocial?
     func getProductImageUrl() -> URL?
 }
 
@@ -22,6 +23,7 @@ final class ProductDetailPresenter {
     private weak var view: ProductDetailViewControllerInterface?
     
     var productDataResponse: Product?
+    var productSocialResponse: ProductSocial?
 
     init(interactor: ProductDetailInteractorInterface,
          router: ProductDetailRouterInterface,
@@ -30,6 +32,7 @@ final class ProductDetailPresenter {
         self.interactor = interactor
         self.router = router
         self.productDataResponse = nil
+        self.productSocialResponse = nil
     }
 }
 
@@ -37,10 +40,15 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
     
     func viewDidAppear() {
         interactor.fetchProductDetail()
+        interactor.fetchProductSocial()
     }
     
     func getProductData() -> Product? {
        return productDataResponse
+    }
+    
+    func getProductSocialData() -> ProductSocial? {
+        return productSocialResponse
     }
     
     func getProductImageUrl() -> URL? {
@@ -52,7 +60,7 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
 }
 
 extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
-    
+ 
     func handleProductDetailResult(result: ProductDetailResutl) {
         switch result {
         case .success(let productDataResult):
@@ -64,4 +72,14 @@ extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
         }
     }
     
+    func handleProductSocialResult(result: ProductSocialResult) {
+        switch result {
+        case .success(let productSocialResult):
+            self.productSocialResponse = productSocialResult
+            view?.loadProductSocialInfo()
+            break
+        case .failure(_):
+            break
+        }
+    }
 }

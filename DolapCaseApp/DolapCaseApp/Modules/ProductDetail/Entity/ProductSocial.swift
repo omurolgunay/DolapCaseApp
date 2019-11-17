@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct ProductSocial: Decodable {
+    var likeCount: Int
+    var commentCounts: CommentStat
+}
