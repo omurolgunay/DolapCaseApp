@@ -35,7 +35,7 @@ class ProductDetailInfoTableViewCell: UITableViewCell {
     func configure(product: Product) {
         self.productNameLabel.text = product.name
         self.productDescriptionLabel.text = product.desc
-        self.productPriceLabel.text = product.price.value.convertToPriceString(currency: product.price.currency)
+        self.productPriceLabel.text = product.price.value.convertToPriceStringWithCurrency(product.price.currency)
     }
     
     func updateSocialData(socialData: ProductSocial) {

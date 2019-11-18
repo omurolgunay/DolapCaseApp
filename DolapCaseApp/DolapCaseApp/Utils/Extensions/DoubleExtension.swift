@@ -9,7 +9,7 @@
 import Foundation
 
 extension Double {
-    func convertToPriceString(currency: String) -> String {
+    func convertToPriceStringWithCurrency(_ currency: String) -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale.current
         formatter.numberStyle = .currency
