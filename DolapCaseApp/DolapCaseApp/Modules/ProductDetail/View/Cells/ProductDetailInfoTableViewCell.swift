@@ -48,6 +48,14 @@ class ProductDetailInfoTableViewCell: UITableViewCell {
         self.productNameLabel.text = product.name
         self.productDescriptionLabel.text = product.desc
         self.productPriceLabel.text = product.price.value.convertToPriceStringWithCurrency(product.price.currency)
+        ratingStarsView.didTouchCosmos =  { rating in
+            self.avarageRatinLabel.text = String(rating)
+        }
+        ratingStarsView.didFinishTouchingCosmos = { rating in
+            UIView.animate(withDuration: 1, animations: {
+                self.ratingStarsView.alpha = 1
+            }, completion: nil)
+        }
     }
     
     func updateSocialData(socialData: ProductSocial) {
