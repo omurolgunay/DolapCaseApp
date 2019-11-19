@@ -18,12 +18,13 @@ protocol ProductDetailPresenterInterface: class {
     
     //MARK: TableView -> Presenter
     func getNumberOfRows() -> Int
-    func getProductImageUrl() -> URL?}
+    func getProductImageUrl() -> URL?
+}
 
 extension ProductDetailPresenter {
     private enum Constant {
         enum Logic {
-            static let countDownNumber: TimeInterval = 5
+            static let countDownNumber: TimeInterval = 60
         }
         enum TableView {
             static let numberOfRowsInSection: Int = 2
@@ -77,7 +78,6 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
         progressBar.startTimer(to: Constant.Logic.countDownNumber) { (state) in
             switch state {
             case .finished:
-                print("bitti")
                 self.interactor.fetchProductSocial()
             default: break
             }
