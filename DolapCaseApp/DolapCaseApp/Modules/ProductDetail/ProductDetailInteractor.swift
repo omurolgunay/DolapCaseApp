@@ -26,29 +26,28 @@ final class ProductDetailInteractor {
 }
 
 extension ProductDetailInteractor: ProductDetailInteractorInterface {
+    
     func fetchProductDetail() {
         guard let path = Bundle.main.path(forResource: "ProductData", ofType: "json") else { return }
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-            let decoder = JSONDecoder()
-            let result = try decoder.decode(Product.self, from: data)
-            self.output?.handleProductDetailResult(result: .success(result))
-        }catch let error {
-            self.output?.handleProductDetailResult(result: .failure(error))
-            return
-        }
+        let result = decodeJSON(with: Product.self, path: path)
+        self.output?.handleProductDetailResult(result: result)
     }
     
     func fetchProductSocial() {
         guard let path = Bundle.main.path(forResource: "SocialData", ofType: "json") else { return }
+        let result = decodeJSON(with: ProductSocial.self, path: path)
+        self.output?.handleProductSocialResult(result: result)
+    }
+    
+    func decodeJSON <T: Decodable>(with type: T.Type, path: String) -> Result<T, Error> {
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
             let decoder = JSONDecoder()
-            let result = try decoder.decode(ProductSocial.self, from: data)
-            self.output?.handleProductSocialResult(result: .success(result))
-        }catch let error {
-            self.output?.handleProductSocialResult(result: .failure(error))
-            return
+            let result = try decoder.decode(type.self, from: data)
+            return .success(result)
+        } catch let error {
+            return .failure(error)
         }
     }
+    
 }
