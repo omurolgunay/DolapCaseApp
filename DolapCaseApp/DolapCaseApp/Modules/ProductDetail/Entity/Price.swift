@@ -9,6 +9,6 @@
 import Foundation
 
 struct Price: Decodable {
-    var value: Double
-    var currency: String
+    let value: Double
+    let currency: String
 }

@@ -16,16 +16,12 @@ class ProductDetailImageTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
-    func configure(url: URL, complationn: @escaping () -> Void ) {
+    func configure(url: URL, complation: @escaping () -> Void ) {
         productImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
             switch result{
             case .success(_):
-                complationn()
+                complation()
             default: break
             }
         }

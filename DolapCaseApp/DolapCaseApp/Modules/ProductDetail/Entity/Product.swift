@@ -9,9 +9,9 @@
 import Foundation
 
 struct Product: Decodable {
-    var id: Int
-    var name: String
-    var desc: String
-    var image: String
-    var price: Price
+    let id: Int
+    let name: String
+    let desc: String
+    let image: String
+    let price: Price
 }

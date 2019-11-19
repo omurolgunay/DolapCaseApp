@@ -37,12 +37,6 @@ class ProductDetailInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configure(product: Product) {
         self.productNameLabel.text = product.name
@@ -52,7 +46,7 @@ class ProductDetailInfoTableViewCell: UITableViewCell {
             self.avarageRatinLabel.text = String(rating)
         }
         ratingStarsView.didFinishTouchingCosmos = { rating in
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.ratingStarsView.alpha = 1
             }, completion: nil)
         }

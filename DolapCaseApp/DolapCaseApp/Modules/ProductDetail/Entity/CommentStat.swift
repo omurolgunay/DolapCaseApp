@@ -9,7 +9,7 @@
 import Foundation
 
 struct CommentStat: Decodable {
-    var averageRating: Double
-    var anonymousCommentsCount: Int
-    var memberCommentsCount: Int
+    let averageRating: Double
+    let anonymousCommentsCount: Int
+    let memberCommentsCount: Int
 }
