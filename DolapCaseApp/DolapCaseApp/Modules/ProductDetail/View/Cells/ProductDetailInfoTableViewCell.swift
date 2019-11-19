@@ -45,6 +45,7 @@ class ProductDetailInfoTableViewCell: UITableViewCell {
         ratingStarsView.didTouchCosmos =  { rating in
             self.avarageRatinLabel.text = String(rating)
         }
+        self.ratingStarsView.alpha = 0.7
         ratingStarsView.didFinishTouchingCosmos = { rating in
             UIView.animate(withDuration: 0.5, animations: {
                 self.ratingStarsView.alpha = 1

@@ -60,6 +60,7 @@ final class ProductDetailPresenter {
 extension ProductDetailPresenter: ProductDetailPresenterInterface {
     
     func viewDidAppear() {
+        view?.showLoading()
         interactor.fetchProductDetail()
         interactor.fetchProductSocial()
     }
@@ -122,6 +123,10 @@ extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
             print(error.localizedDescription)
             break
         }
+    }
+    
+    func fetchDataProccess(isLoading: Bool) {
+        isLoading ? view?.showLoading() : view?.hideLoading()
     }
     
 }

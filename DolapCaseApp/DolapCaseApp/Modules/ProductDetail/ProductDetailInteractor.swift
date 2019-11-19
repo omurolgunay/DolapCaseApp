@@ -16,6 +16,7 @@ protocol ProductDetailInteractorInterface {
 protocol ProductDetailInteractorInterfaceOutput: class {
     func handleProductDetailResult(result: ProductDetailResutl)
     func handleProductSocialResult(result: ProductSocialResult)
+    func fetchDataProccess(isLoading: Bool)
 }
 
 typealias ProductDetailResutl = Result<Product,Error>
@@ -40,12 +41,15 @@ extension ProductDetailInteractor: ProductDetailInteractorInterface {
     }
     
     func decodeJSON <T: Decodable>(with type: T.Type, path: String) -> Result<T, Error> {
+        self.output?.fetchDataProccess(isLoading: true)
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
             let decoder = JSONDecoder()
             let result = try decoder.decode(type.self, from: data)
+            self.output?.fetchDataProccess(isLoading: false)
             return .success(result)
         } catch let error {
+            self.output?.fetchDataProccess(isLoading: false)
             return .failure(error)
         }
     }

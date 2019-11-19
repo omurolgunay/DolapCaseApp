@@ -37,7 +37,6 @@ final class ProductDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         presenter?.viewDidAppear()
-        showLoading()
     }
 }
 
@@ -66,7 +65,6 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             if let url = presenter?.getProductImageUrl() {
                 cell.configure(url: url) {
                     self.productDetailTableView.reloadRows(at: [IndexPath(row: CellType.productImageCell.rawValue, section: 0)], with: .none)
-                    self.hideLoading()
                 }                
             }
             return cell  
