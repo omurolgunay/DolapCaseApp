@@ -78,7 +78,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             if let socialData = presenter?.getProductSocialData() {
                 cell.updateSocialData(socialData: socialData)
             }
-            presenter?.reloadSocialData(progressBar: cell.progressBar) //Trigger countDown to start
+            presenter?.reloadSocialDataWithTimer(cell.progressBar) //Trigger countDown to start
             return cell
         default:
             break
@@ -86,4 +86,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return presenter?.getEstimatedHeightForRow() ?? 50
+    }
 }

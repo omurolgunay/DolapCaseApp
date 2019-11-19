@@ -14,20 +14,24 @@ protocol ProductDetailPresenterInterface: class {
     func viewDidAppear()
     func getProductData() -> Product?
     func getProductSocialData() -> ProductSocial?
-    func reloadSocialData(progressBar: UICircularTimerRing)
+    func reloadSocialDataWithTimer(_ progressBar: UICircularTimerRing)
     
     //MARK: TableView -> Presenter
     func getNumberOfRows() -> Int
     func getProductImageUrl() -> URL?
+    func getEstimatedHeightForRow() -> CGFloat
 }
 
 extension ProductDetailPresenter {
     private enum Constant {
         enum Logic {
+            //CountDown to reload social data
             static let countDownNumber: TimeInterval = 60
         }
         enum TableView {
+            //Image + Info Cell
             static let numberOfRowsInSection: Int = 2
+            static let estimatedHeightForRow: CGFloat = 300
         }
     }
 }
@@ -74,7 +78,7 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
          return url
      }
     
-    func reloadSocialData(progressBar: UICircularTimerRing) {
+    func reloadSocialDataWithTimer(_ progressBar: UICircularTimerRing) {
         progressBar.startTimer(to: Constant.Logic.countDownNumber) { (state) in
             switch state {
             case .finished:
@@ -86,6 +90,10 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
     
     func getNumberOfRows() -> Int {
         return Constant.TableView.numberOfRowsInSection
+    }
+    
+    func getEstimatedHeightForRow() -> CGFloat {
+        return Constant.TableView.estimatedHeightForRow
     }
 
 }
