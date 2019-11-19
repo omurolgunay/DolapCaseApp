@@ -12,10 +12,18 @@
 - [x] Error handling
 
 ##### Table view
-- [x] add generic reusablecell extension
-- [x] implementing tableView
-- [x] implementing custom cell
-- [x] imageCell auto resizing
+- [x] Add generic reusablecell extension
+- [x] Implementing tableView
+- [x] Implementing custom cell
+- [x] ImageCell auto resizing
 
-###### Others
-- [x] add functionality to rating stars
+##### Count Down
+- [x] Fork and edit [UICircularProgressRing](https://github.com/omurolgunay/UICircularProgressRing "UICircularProgressRing") to countdown feature
+
+##### Others
+- [x] Add functionality to rating stars
+- [x] Add dark mode support
+- [x] Self-review
+
+
+> Swift 5.0 - Xcode 11.1 ~~no buildtime&runtime isssues~~
