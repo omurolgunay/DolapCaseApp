@@ -31,6 +31,7 @@ final class ProductDetailViewController: UIViewController {
             productDetailTableView.register(cellType: ProductDetailImageTableViewCell.self)
             productDetailTableView.register(cellType: ProductDetailInfoTableViewCell.self)
             productDetailTableView.tableFooterView = UIView()
+            productDetailTableView.backgroundColor = UIColor(named: "TableViewBackground")
         }
     }
     
