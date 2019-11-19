@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProductDetailViewControllerInterface: class {
+protocol ProductDetailViewControllerInterface: BaseViewInterface {
     func loadProductDetailTableView()
     func loadProductSocialInfo()
 }
@@ -20,7 +20,7 @@ extension ProductDetailViewController {
     }
 }
 
-class ProductDetailViewController: UIViewController {
+final class ProductDetailViewController: UIViewController {
     
     //MARK: Variables
     var presenter: ProductDetailPresenterInterface?
@@ -37,24 +37,26 @@ class ProductDetailViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         presenter?.viewDidAppear()
+        showLoading()
     }
 }
 
 extension ProductDetailViewController: ProductDetailViewControllerInterface {
+    
     func loadProductDetailTableView() {
         productDetailTableView.reloadData()
     }
     
     func loadProductSocialInfo() {
-        //productDetailTableView.reloadRows(at: [IndexPath(row: CellType.productInfoCell.rawValue, section: 0)], with: .automatic)
-        print("we are here")
+        productDetailTableView.reloadRows(at: [IndexPath(row: CellType.productInfoCell.rawValue, section: 0)], with: .none)
     }
+    
 }
 
 extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return presenter?.getNumberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,10 +64,12 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         case CellType.productImageCell.rawValue:
             let cell = tableView.dequeueReusableCell(with: ProductDetailImageTableViewCell.self, for: indexPath)
             if let url = presenter?.getProductImageUrl() {
-                cell.configure(url: url)
+                cell.configure(url: url) {
+                    self.productDetailTableView.reloadRows(at: [IndexPath(row: CellType.productImageCell.rawValue, section: 0)], with: .none)
+                    self.hideLoading()
+                }                
             }
-            
-            return cell
+            return cell  
         case CellType.productInfoCell.rawValue:
             let cell = tableView.dequeueReusableCell(with: ProductDetailInfoTableViewCell.self, for: indexPath)
             if let product = presenter?.getProductData() {
@@ -74,7 +78,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             if let socialData = presenter?.getProductSocialData() {
                 cell.updateSocialData(socialData: socialData)
             }
-            
+            presenter?.reloadSocialData(progressBar: cell.progressBar) //Trigger countDown to start
             return cell
         default:
             break

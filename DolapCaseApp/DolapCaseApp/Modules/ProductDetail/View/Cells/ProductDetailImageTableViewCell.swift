@@ -21,7 +21,13 @@ class ProductDetailImageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(url: URL) {
-        productImageView.kf.setImage(with: url)
+    func configure(url: URL, complationn: @escaping () -> Void ) {
+        productImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (result) in
+            switch result{
+            case .success(_):
+                complationn()
+            default: break
+            }
+        }
     }
 }

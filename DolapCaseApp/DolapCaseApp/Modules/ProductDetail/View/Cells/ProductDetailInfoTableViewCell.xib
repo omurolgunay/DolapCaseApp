@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="8Et-ya-Ttz">
-                        <rect key="frame" x="20" y="11" width="162.5" height="84"/>
+                        <rect key="frame" x="20" y="11" width="167" height="84"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-gR-dTb">
                                 <rect key="frame" x="0.0" y="0.0" width="162.5" height="18"/>
@@ -36,21 +37,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-nb-960">
-                                <rect key="frame" x="0.0" y="29" width="0.0" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-nb-960">
+                                <rect key="frame" x="0.0" y="29" width="167" height="21"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnV-5v-Unz">
-                                        <rect key="frame" x="0.0" y="0.0" width="21" height="16"/>
+                                        <rect key="frame" x="0.0" y="2.5" width="21" height="16"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" red="0.96862745100000003" green="0.75294117650000003" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSV-YV-6SH" customClass="CosmosView" customModule="Cosmos">
-                                        <rect key="frame" x="-143" y="0.0" width="143" height="18"/>
+                                        <rect key="frame" x="24" y="3" width="143" height="15"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="Y0D-tA-GJ2"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
                                                 <color key="value" red="0.96862745098039216" green="0.75294117647058822" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,7 +85,6 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="OSV-YV-6SH" firstAttribute="leading" secondItem="TnV-5v-Unz" secondAttribute="trailing" constant="5" id="19p-w0-PKT"/>
                                     <constraint firstItem="TnV-5v-Unz" firstAttribute="leading" secondItem="BAX-nb-960" secondAttribute="leading" id="eZL-9G-Uk5"/>
                                 </constraints>
                             </stackView>
@@ -100,17 +97,21 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8mS-Vw-RFS">
-                        <rect key="frame" x="266" y="11" width="50" height="84"/>
+                        <rect key="frame" x="256" y="11" width="60" height="84"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ps2-0Y-p0S">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="36"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-ev-jfC">
-                                        <rect key="frame" x="15" y="1.5" width="20.5" height="17.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-ev-jfC">
+                                        <rect key="frame" x="15" y="0.0" width="30" height="25"/>
                                         <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="AeY-OE-gt4"/>
+                                            <constraint firstAttribute="height" constant="25" id="OXq-Hu-EBV"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="198" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-su-aUZ">
-                                        <rect key="frame" x="16" y="24" width="18" height="12"/>
+                                        <rect key="frame" x="21" y="26" width="18" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -118,18 +119,16 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W4-dg-PX3">
-                                <rect key="frame" x="0.0" y="44" width="50" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="60" height="40"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-K8-9Vn">
-                                        <rect key="frame" x="15" y="10" width="20" height="20"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-K8-9Vn" customClass="UICircularTimerRing" customModule="UICircularProgressRing">
+                                        <rect key="frame" x="15" y="5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="paW-LU-XUB"/>
-                                            <constraint firstAttribute="height" constant="20" id="ybo-oP-His"/>
+                                            <constraint firstAttribute="width" constant="30" id="paW-LU-XUB"/>
+                                            <constraint firstAttribute="height" constant="30" id="ybo-oP-His"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Wf-YF-AiA"/>
                                     <constraint firstItem="ya8-K8-9Vn" firstAttribute="centerX" secondItem="7W4-dg-PX3" secondAttribute="centerX" id="Phe-Wh-KLL"/>
@@ -151,16 +150,18 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
+                <outlet property="avarageRatinLabel" destination="TnV-5v-Unz" id="M25-Lr-pvs"/>
                 <outlet property="likeCountLabel" destination="kLf-su-aUZ" id="Ufp-IF-r8Q"/>
                 <outlet property="productDescriptionLabel" destination="pP5-yh-R8f" id="jay-1r-8PD"/>
                 <outlet property="productNameLabel" destination="Y2I-ed-grY" id="wiH-fL-0OJ"/>
                 <outlet property="productPriceLabel" destination="hhz-Xa-7yA" id="Yzt-ZM-Y3U"/>
+                <outlet property="progressBar" destination="ya8-K8-9Vn" id="VFf-QD-gNZ"/>
                 <outlet property="ratingStarsView" destination="OSV-YV-6SH" id="Cur-8H-gYU"/>
             </connections>
             <point key="canvasLocation" x="149.27536231884059" y="155.35714285714286"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="heart" width="248" height="186"/>
     </resources>
 </document>

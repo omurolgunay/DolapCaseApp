@@ -21,7 +21,7 @@ protocol ProductDetailInteractorInterfaceOutput: class {
 typealias ProductDetailResutl = Result<Product,Error>
 typealias ProductSocialResult = Result<ProductSocial,Error>
 
-class ProductDetailInteractor {
+final class ProductDetailInteractor {
     weak var output: ProductDetailInteractorInterfaceOutput?
 }
 
@@ -33,7 +33,8 @@ extension ProductDetailInteractor: ProductDetailInteractorInterface {
             let decoder = JSONDecoder()
             let result = try decoder.decode(Product.self, from: data)
             self.output?.handleProductDetailResult(result: .success(result))
-        } catch {
+        }catch let error {
+            self.output?.handleProductDetailResult(result: .failure(error))
             return
         }
     }
@@ -45,7 +46,8 @@ extension ProductDetailInteractor: ProductDetailInteractorInterface {
             let decoder = JSONDecoder()
             let result = try decoder.decode(ProductSocial.self, from: data)
             self.output?.handleProductSocialResult(result: .success(result))
-        } catch {
+        }catch let error {
+            self.output?.handleProductSocialResult(result: .failure(error))
             return
         }
     }

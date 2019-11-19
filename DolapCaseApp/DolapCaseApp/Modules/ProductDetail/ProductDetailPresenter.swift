@@ -7,13 +7,28 @@
 //
 
 import Foundation
+import UICircularProgressRing
 
 protocol ProductDetailPresenterInterface: class {
     //MARK: View -> Presenter
     func viewDidAppear()
     func getProductData() -> Product?
     func getProductSocialData() -> ProductSocial?
-    func getProductImageUrl() -> URL?
+    func reloadSocialData(progressBar: UICircularTimerRing)
+    
+    //MARK: TableView -> Presenter
+    func getNumberOfRows() -> Int
+    func getProductImageUrl() -> URL?}
+
+extension ProductDetailPresenter {
+    private enum Constant {
+        enum Logic {
+            static let countDownNumber: TimeInterval = 5
+        }
+        enum TableView {
+            static let numberOfRowsInSection: Int = 2
+        }
+    }
 }
 
 final class ProductDetailPresenter {
@@ -34,6 +49,7 @@ final class ProductDetailPresenter {
         self.productDataResponse = nil
         self.productSocialResponse = nil
     }
+    
 }
 
 extension ProductDetailPresenter: ProductDetailPresenterInterface {
@@ -52,9 +68,24 @@ extension ProductDetailPresenter: ProductDetailPresenterInterface {
     }
     
     func getProductImageUrl() -> URL? {
-        guard let stringUrl = productDataResponse?.image else { return nil}
-        let url = URL(string: stringUrl)
-        return url
+         guard let stringUrl = productDataResponse?.image else { return nil}
+         let url = URL(string: stringUrl)
+         return url
+     }
+    
+    func reloadSocialData(progressBar: UICircularTimerRing) {
+        progressBar.startTimer(to: Constant.Logic.countDownNumber) { (state) in
+            switch state {
+            case .finished:
+                print("bitti")
+                self.interactor.fetchProductSocial()
+            default: break
+            }
+        }
+    }
+    
+    func getNumberOfRows() -> Int {
+        return Constant.TableView.numberOfRowsInSection
     }
 
 }
@@ -67,7 +98,8 @@ extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
             self.productDataResponse = productDataResult
             view?.loadProductDetailTableView()
             break
-        case .failure(_):
+        case .failure(let error):
+            print(error.localizedDescription)
             break
         }
     }
@@ -78,8 +110,10 @@ extension ProductDetailPresenter: ProductDetailInteractorInterfaceOutput {
             self.productSocialResponse = productSocialResult
             view?.loadProductSocialInfo()
             break
-        case .failure(_):
+        case .failure(let error):
+            print(error.localizedDescription)
             break
         }
     }
+    
 }
