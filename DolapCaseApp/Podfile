@@ -8,4 +8,5 @@ target 'DolapCaseApp' do
   # Pods for DolapCaseApp
   pod 'Kingfisher'
   pod 'Cosmos', '~> 20.0'
+  pod 'UICircularProgressRing', :git => 'https://github.com/omurolgunay/UICircularProgressRing'
 end

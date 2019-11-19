@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		084976B5DBB0D1FFDD2C33FB /* Pods_DolapCaseApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6580DEFFCEE52D6F92BB826 /* Pods_DolapCaseApp.framework */; };
+		ED16B44723831662005E2D17 /* ProductDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED16B44623831662005E2D17 /* ProductDetailImageTableViewCell.xib */; };
+		ED16B44A23833A4F005E2D17 /* BaseViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED16B44923833A4F005E2D17 /* BaseViewInterface.swift */; };
 		ED2ECF86238137E400937D34 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF85238137E400937D34 /* UITableViewExtension.swift */; };
 		ED2ECF882381383700937D34 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */; };
 		ED2ECF8B2381449600937D34 /* ProductDetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */; };
-		ED2ECF8C2381449600937D34 /* ProductDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */; };
 		ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */; };
 		ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED802607237EEEEE00CDBBF4 /* ProductDetail.storyboard */; };
 		ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED80260A237EEEF000CDBBF4 /* Assets.xcassets */; };
@@ -36,10 +37,11 @@
 		2D220EBD8D0BE0DE228B6C2E /* Pods-DolapCaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DolapCaseApp.debug.xcconfig"; path = "Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B6580DEFFCEE52D6F92BB826 /* Pods_DolapCaseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DolapCaseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F9BC979D3089626B903EBA /* Pods-DolapCaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DolapCaseApp.release.xcconfig"; path = "Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp.release.xcconfig"; sourceTree = "<group>"; };
+		ED16B44623831662005E2D17 /* ProductDetailImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailImageTableViewCell.xib; sourceTree = "<group>"; };
+		ED16B44923833A4F005E2D17 /* BaseViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewInterface.swift; sourceTree = "<group>"; };
 		ED2ECF85238137E400937D34 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		ED2ECF872381383700937D34 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageTableViewCell.swift; sourceTree = "<group>"; };
-		ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailImageTableViewCell.xib; sourceTree = "<group>"; };
 		ED8025FE237EEEEE00CDBBF4 /* DolapCaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DolapCaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED802601237EEEEE00CDBBF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED802608237EEEEE00CDBBF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProductDetail.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED16B44823833A15005E2D17 /* BaseInterfaces */ = {
+			isa = PBXGroup;
+			children = (
+				ED16B44923833A4F005E2D17 /* BaseViewInterface.swift */,
+			);
+			path = BaseInterfaces;
+			sourceTree = "<group>";
+		};
 		ED2ECF84238136F400937D34 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		ED802600237EEEEE00CDBBF4 /* DolapCaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED80262F237F1C9900CDBBF4 /* Storyboards */,
 				ED80261F237F141900CDBBF4 /* Modules */,
 				ED802620237F143000CDBBF4 /* Utils */,
 				ED802618237F0E8400CDBBF4 /* Data */,
@@ -150,7 +161,7 @@
 		ED80261F237F141900CDBBF4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				ED80262F237F1C9900CDBBF4 /* Storyboards */,
+				ED16B44823833A15005E2D17 /* BaseInterfaces */,
 				ED802621237F14C100CDBBF4 /* ProductDetail */,
 			);
 			path = Modules;
@@ -220,7 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2ECF892381449600937D34 /* ProductDetailImageTableViewCell.swift */,
-				ED2ECF8A2381449600937D34 /* ProductDetailImageTableViewCell.xib */,
+				ED16B44623831662005E2D17 /* ProductDetailImageTableViewCell.xib */,
 				ED9764AC2381A3F1006C8EAC /* ProductDetailInfoTableViewCell.swift */,
 				ED9764AD2381A3F1006C8EAC /* ProductDetailInfoTableViewCell.xib */,
 			);
@@ -289,11 +300,11 @@
 			files = (
 				ED80261C237F0F3E00CDBBF4 /* SocialData.json in Resources */,
 				ED80260E237EEEF000CDBBF4 /* LaunchScreen.storyboard in Resources */,
-				ED2ECF8C2381449600937D34 /* ProductDetailImageTableViewCell.xib in Resources */,
 				ED80261E237F0F4600CDBBF4 /* ProductData.json in Resources */,
 				ED80260B237EEEF000CDBBF4 /* Assets.xcassets in Resources */,
 				ED802609237EEEEE00CDBBF4 /* ProductDetail.storyboard in Resources */,
 				ED9764AF2381A3F1006C8EAC /* ProductDetailInfoTableViewCell.xib in Resources */,
+				ED16B44723831662005E2D17 /* ProductDetailImageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +367,7 @@
 				ED802626237F14C100CDBBF4 /* ProductDetailRouter.swift in Sources */,
 				ED802629237F14C100CDBBF4 /* ProductDetailPresenter.swift in Sources */,
 				ED2ECF86238137E400937D34 /* UITableViewExtension.swift in Sources */,
+				ED16B44A23833A4F005E2D17 /* BaseViewInterface.swift in Sources */,
 				ED802602237EEEEE00CDBBF4 /* AppDelegate.swift in Sources */,
 				ED802631237F265A00CDBBF4 /* Price.swift in Sources */,
 				ED9764B12381C0CF006C8EAC /* CommentStat.swift in Sources */,

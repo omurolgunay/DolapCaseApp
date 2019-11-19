@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-DolapCaseApp/Pods-DolapCaseApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework
